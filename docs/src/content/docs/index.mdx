@@ -34,6 +34,40 @@ pnpm add code-cage
 
 You can also add the attribute `dark` to get the dark version. This sets the CSS property `color-scheme`. This means that in your styles you can use the `light-dark()` function and it will automatically update inside your code.
 
+### Styling
+
+While the inside of the component exists in the Shadow DOM, there are a series of `::part()` selectors that you can use to style.
+
+- `::part(button)`: Selects all the buttons in the top row.
+- `::part(content-type)`: Selects the `<ul>` wrapping the html, css, and js buttons.
+- `::part(controls)`: Selects the outer `<ul>` wrapping the content-type list and the copy button.
+- `::part(output)`: Selects the output tabs.
+- `::part(results)`: Selects the div wrapping the controls and the output.
+- `::part(iframe)`: Selects the iframe.
+- `::part(title)`: Selects the title. (If the title is unused, this doesn't select anything)
+- `::part(host)`: Selects the outer most wrapper of the component.
+
+There are also some custom properties that can be set if you don't want to mess with `::part()`
+
+- `--cc-color`: Sets the color.
+- `--cc-bg`: Sets the background of buttons and the `:host`.
+- `--cc-results-bg`: Sets the background of the code tabs.
+- `--cc-border`: Sets the border of the buttons and results.
+
+<Aside>
+`--cc-border` doesn't sets the whole `border` property.
+
+Using `light-dark()` you can also take advantage of the `dark attribute`.
+
+Here's an inaccessible example:
+```css
+code-cage {
+  --bg: light-dark(limegreen, papayawhipe);
+}
+```
+</Aside>
+
+
 ## Example
 
 <CodeCage
