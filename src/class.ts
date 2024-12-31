@@ -157,32 +157,33 @@ export class CodeCage extends HTMLElement {
       : `<pre><code>${this.e(this.js)}</code></pre>`;
 
     this.shadowRoot!.innerHTML = `
-        <p class="title">${this.title}</p>
-        <iframe></iframe>
-        <div class="results">
-            <ul role="list" class="controls">
+      <div part="host">
+        <p class="title" part="title">${this.title}</p>
+        <iframe part="iframe"></iframe>
+        <div class="results" part="results">
+            <ul role="list" class="controls" part="controls">
                 <li>
-                    <ul class="content-type">
+                    <ul class="content-type" part="content-type">
                         <li>
-                            <button type="button">HTML</button>
+                            <button type="button" part="button">HTML</button>
                         </li>
                         <li>
-                            <button type="button">CSS</button>
+                            <button type="button" part="button">CSS</button>
                         </li>
                         <li>
-                            <button type="button">JS</button>
+                            <button type="button" part="button">JS</button>
                         </li>
                     </ul>
                 </li>
                 <li>
-                    <button type="button" class="copy">Copy</button>
+                    <button type="button" class="copy" part="button">Copy</button>
                 </li>
             </ul>
-            <div class="output" id="${this.id}_html">${html}</div>
-            <div class="output" id="${this.id}_css">${css}</div>
-            <div class="output" id="${this.id}_js">${js}</div>
+            <div class="output" id="${this.id}_html" part="output">${html}</div>
+            <div class="output d-none" id="${this.id}_css" part="output">${css}</div>
+            <div class="output d-none" id="${this.id}_js" part="output">${js}</div>
         </div>
-        `;
+      </div>`;
 
     this.shadowRoot!.adoptedStyleSheets.push(styles);
     if (this.hasAttribute("dark")) {
