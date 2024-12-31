@@ -1,6 +1,6 @@
 {
   "name": "code-cage",
-  "version": "0.1.3",
+  "version": "0.1.4",
   "module": "./dist/code-cage.js",
   "type": "module",
   "exports": {
