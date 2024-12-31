@@ -25,7 +25,7 @@ const formats = Object.keys(fileName) as Array<keyof typeof fileName>;
 export default defineConfig({
   base: "./",
   build: {
-    outDir: "./build/dist",
+    outDir: "./dist",
     lib: {
       entry: path.resolve(__dirname, "src/index.ts"),
       name: getPackageNameCamelCase(),
