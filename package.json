@@ -1,12 +1,12 @@
 {
-  "name": "vite-vanilla-ts-lib-starter",
+  "name": "code-cage",
   "private": true,
   "version": "0.0.4",
-  "module": "./dist/vite-vanilla-ts-lib-starter.js",
+  "module": "./dist/code-cage.js",
   "type": "module",
   "exports": {
     ".": {
-      "import": "./dist/vite-vanilla-ts-lib-starter.js"
+      "import": "./dist/code-cage.js"
     },
     "./dist/": {
       "import": "./dist/"

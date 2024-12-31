@@ -1,4 +1,4 @@
-import { MyPen } from "./class";
+import { CodeCage } from "./class";
 
-export const define = (localName = "my-pen") =>
-  customElements.define(localName, MyPen);
+export const define = (localName = "code-cage") =>
+  customElements.define(localName, CodeCage);

@@ -63,7 +63,7 @@ li:has(.copy) {
     justify-self: end;
 }
 `);
-export class MyPen extends HTMLElement {
+export class CodeCage extends HTMLElement {
   frame?: HTMLIFrameElement;
   // escape html
   e(str: string) {

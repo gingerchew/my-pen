@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vite App</title>
+    <title>CodeCage testing</title>
     <style>
       body {
         margin: 0;
@@ -16,30 +16,30 @@
   </head>
   <body>
     <h3>Light Mode & No Title</h3>
-    <my-pen
+    <code-cage
       html='<div class="test">Testing</div>'
       css=".test {
       color: limegreen;
     }"
       js="(function() { console.log('testing') })()"
-    ></my-pen>
+    ></code-cage>
     <h3>Dark Mode & No Title</h3>
-    <my-pen
+    <code-cage
       html='<div class="test">Testing</div>'
       css=".test {
       color: limegreen;
     }"
       js="(function() { console.log('testing') })()"
-    ></my-pen>
-    <my-pen
+    ></code-cage>
+    <code-cage
       title="Light Mode & Title"
       html='<div class="test">Testing</div>'
       css=".test {
   color: limegreen;
 }"
       js="(function() { console.log('testing') })()"
-    ></my-pen>
-    <my-pen
+    ></code-cage>
+    <code-cage
       dark
       title="Dark Mode & Title"
       html='<div class="test">Testing</div>'
@@ -47,8 +47,8 @@
   color: limegreen;
 }"
       js="(function() { console.log('testing') })()"
-    ></my-pen>
-    <my-pen title="Using your own syntax highlighting" use-slots>
+    ></code-cage>
+    <code-cage title="Using your own syntax highlighting" use-slots>
       <pre
         slot="js"
         style="
@@ -79,7 +79,7 @@
           font-weight: 400;
         "
       ><span style="color: rgb(136, 0, 0); font-weight: 400;">.test</span> {<br/>    <span style="color: rgb(68, 68, 68); font-weight: 700;">color</span>: limegreen;<br/>}</pre>
-    </my-pen>
+    </code-cage>
     <script type="module">
       import { define } from "./src/index";
       define();
