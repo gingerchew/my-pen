@@ -4,9 +4,33 @@ title: How to use with Astro
 
 import { Aside } from "@astrojs/starlight/components";
 
-I'm currently working on making an importable component accessible at `code-cage/astro`, I'd like to have the styling story figured out first.
+We export our own Astro component that is compatible with the `<Code>` component found at `astro:components`.
 
-In the mean time, creating an `.astro` wrapper can be done by following the below code snippet. For this example, we're going to use the Starlight theme's `<Code>` component. Feel free to use whatever syntax highlighter you are currently using, as long as it outputs HTML it should work.
+You can use the example below to see how it works.
+
+```astro
+---
+import { Code } from 'astro:components';
+import CodeCage from 'code-cage/astro';
+
+// Multiline code is best done this way
+const css = `.test {
+    color: limegreen;
+}`
+const js = `(function() {
+    console.log('test successful!');
+})();`
+---
+<CodeCage>
+    <Code slot="html" lang="html" code="<div class='test'>Testing</div>" />
+    <Code slot="css" lang="css" code={css} />
+    <Code slot="js" lang="js" code={js} />
+</CodeCage>
+```
+
+<Aside>Below is an example of how to make your own Astro wrapper using the `<code-cage>` custom element. It is essentially the same as the exported Astro component, but we'll leave this hear for folks who want to learn</Aside>
+
+For this example, we're going to use the Starlight theme's `<Code>` component. Feel free to use whatever syntax highlighter you are currently using, as long as it outputs HTML it should work.
 
 ```astro
 ---
@@ -48,8 +72,3 @@ const serverRenderedHTMLString = `<div>
 })();"
 />
 ```
-
-<Aside>
-  As you can see, multiline content works in the attributes, but you have to
-  adjust the spacing.
-</Aside>

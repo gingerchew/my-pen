@@ -1,4 +1,9 @@
-<code-cage use-slots>
+---
+interface Props {
+    dark: boolean;
+}
+---
+<code-cage use-slots {...Astro.props}>
     <span slot="html"><slot name="html"></slot></span>
     <span slot="css"><slot name="css"></slot></span>
     <span slot="js"><slot name="js"></slot></span>
