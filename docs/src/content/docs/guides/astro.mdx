@@ -1,0 +1,52 @@
+---
+title: How to use with Astro
+---
+
+import { Aside } from '@astrojs/starlight/components';
+
+I'm currently working on making an importable component accessible at `code-cage/astro`, I'd like to have the styling story figured out first.
+
+In the mean time, creating an `.astro` wrapper can be done by following the below code snippet. For this example, we're going to use the Starlight theme's `<Code>` component. Feel free to use whatever syntax highlighter you are currently using, as long as it outputs HTML it should work.
+
+```astro
+---
+import { Code } from '@astrojs/starlight/components';
+interface Props {
+    html: string;
+    css: string;
+    js: string;
+}
+---
+<code-cage use-slots>
+    <span slot="html"><Code code={Astro.props.html} lang="html" /></span>
+    <span slot="css"><Code code={Astro.props.css} lang="css" /></span>
+    <span slot="js"><Code code={Astro.props.js} lang="js" /></span>
+</code-cage>
+<script>
+import { define } from 'code-cage';
+define();
+</script>
+```
+
+Then use it as you would any other `.astro` component.
+
+```.astro
+---
+import CodeCage from './components/CodeCage.astro';
+
+const serverRenderedHTMLString = `<div>
+    ...
+</div>`;
+---
+<CodeCage
+    html={serverRenderedHTMLString}
+    css=".test {
+    color: limegreen;
+}"
+    js="(function() {
+    console.log('testing');
+})();"
+/>
+```
+
+<Aside>As you can see, multiline content works in the attributes, but you have to adjust the spacing.</Aside>

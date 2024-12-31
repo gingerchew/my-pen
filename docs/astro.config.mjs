@@ -12,7 +12,13 @@ export default defineConfig({
       social: {
         github: "https://github.com/gingerchew/code-cage",
       },
-      sidebar: [],
+      sidebar: [
+        {
+          label: "Guides", items: [
+            { label: "Astro", slug: "guides/astro" }
+          ]
+        }
+      ],
       credits: true,
     }),
   ],
