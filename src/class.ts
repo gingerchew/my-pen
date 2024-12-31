@@ -6,6 +6,8 @@ styles.replaceSync(`
     --bg: light-dark(#fafaff, #121314);
     --results-bg: light-dark(#eee, #333);
     --border: 1px solid light-dark(#efeffa, #2121224);
+}
+.host
     display: grid;
     grid-template-columns: 1fr 1fr;
     background-color: var(--bg);
