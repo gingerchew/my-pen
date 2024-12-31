@@ -9,6 +9,9 @@
     },
     "./dist/": {
       "import": "./dist/"
+    },
+    "./astro": {
+      "import": "./astro/CodeCage.astro"
     }
   },
   "repository": {
