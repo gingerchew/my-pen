@@ -2,3 +2,16 @@ docs/
 .husky/
 .github/
 test/
+
+src/
+.prettierignore
+.eslintrc
+.lintstagedrc
+.nvmrc
+.prettierrc
+.stylelintignore
+.stylelintrc
+dts-bundle-generator.config.testfavicon.svg
+index.html
+tsconfig.json
+vite.config.ts
