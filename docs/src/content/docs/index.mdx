@@ -3,7 +3,7 @@ title: Installation
 description: How to install and get started using CodeCage
 ---
 
-import { Code } from "@astrojs/starlight/components";
+import { Code, Aside } from "@astrojs/starlight/components";
 import CodeCage from "../../components/CodeCage.astro";
 
 CodeCage is a Web Component to generate a CodePen like code viewing experience.
@@ -30,7 +30,9 @@ pnpm add code-cage
 ></code-cage>
 ```
 
-> Make sure you include the script somewhere in your site.
+<Aside>Make sure you include the script somewhere in your site.</Aside>
+
+You can also add the attribute `dark` to get the dark version. This sets the CSS property `color-scheme`. This means that in your styles you can use the `light-dark()` function and it will automatically update inside your code.
 
 ## Example
 
