@@ -2,15 +2,15 @@ let instanceId = 0;
 const styles = new CSSStyleSheet();
 styles.replaceSync(`
 :host {
-    --color: light-dark(#121314, #fafaff);
-    --bg: light-dark(#fafaff, #121314);
-    --results-bg: light-dark(#eee, #333);
-    --border: 1px solid light-dark(#efeffa, #2121224);
+    --cc-color: light-dark(#121314, #fafaff);
+    --cc-bg: light-dark(#fafaff, #121314);
+    --cc-results-bg: light-dark(#eee, #333);
+    --cc-border: 1px solid light-dark(#efeffa, #2121224);
 }
 .host
     display: grid;
     grid-template-columns: 1fr 1fr;
-    background-color: var(--bg);
+    background-color: var(--cc-bg);
     padding: 1ch;
     gap: 1ch;
     font-family: sans-serif;
@@ -20,7 +20,7 @@ styles.replaceSync(`
 }
 p {
     grid-column: 1/-1;
-    color: var(--color);
+    color: var(--cc-color);
     font-size: 1.5rem;
     margin: 0;
 }
@@ -46,20 +46,20 @@ li {
     grid-column: span 1;
 }
 button {
-    background-color: var(--bg);;
-    color: var(--color);
+    background-color: var(--cc-bg);
+    color: var(--cc-color);
     padding: 1ch 1.5ch;
-    border: var(--border);
+    border: var(--cc-border);
     border-radius: 1ch;
 }
 .results {
-    background-color: var(--results-bg);
+    background-color: var(--cc-results-bg);
     padding: 1ch;
     border-radius: 1ch;
-    border: var(--border);
+    border: var(--cc-border);
 }
 .output {
-    color: var(--color);
+    color: var(--cc-color);
 }
 li:has(.copy) {
     justify-self: end;
