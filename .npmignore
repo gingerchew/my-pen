@@ -12,7 +12,7 @@ src/
 .prettierrc
 .stylelintignore
 .stylelintrc
-dts-bundle-generator.config.test
+dts-bundle-generator.config.ts
 favicon.svg
 index.html
 tsconfig.json
