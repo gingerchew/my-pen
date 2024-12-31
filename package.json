@@ -11,6 +11,11 @@
       "import": "./dist/"
     }
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/gingerchew/code-cage"
+  },
+  "homepage": "https://gingerchew.github.io/code-cage",
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
