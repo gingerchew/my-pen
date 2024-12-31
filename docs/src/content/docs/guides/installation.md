@@ -15,12 +15,16 @@ pnpm add code-cage
 
 ```html
 <code-cage use-slots>
-    <span slot="html">{{my_html_snippet}}</span>
-    <span slot="css">{{my_css_snippet}}</span>
-    <span slot="js">{{my_js_snippet}}</span>
+  <span slot="html">{{my_html_snippet}}</span>
+  <span slot="css">{{my_css_snippet}}</span>
+  <span slot="js">{{my_js_snippet}}</span>
 </code-cage>
 <!-- Or using attributes -->
-<code-cage html="{{my_html_snippet}}" css="{{my_css_snippet}}" js="{{my_js_snippet}}"></code-cage>
+<code-cage
+  html="{{my_html_snippet}}"
+  css="{{my_css_snippet}}"
+  js="{{my_js_snippet}}"
+></code-cage>
 ```
 
 > Make sure you include the script somewhere in your site.
