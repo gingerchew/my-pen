@@ -159,7 +159,7 @@ export class CodeCage extends HTMLElement {
 
     this.shadowRoot!.innerHTML = `
       <div part="host">
-        <p class="title" part="title">${this.title}</p>
+        ${this.title ? `<p class="title" part="title">${this.title}</p>` : ``}
         <iframe part="iframe"></iframe>
         <div class="results" part="results">
             <ul role="list" class="controls" part="controls">
