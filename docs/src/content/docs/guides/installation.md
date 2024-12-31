@@ -32,7 +32,7 @@ pnpm add code-cage
 ## To do
 
 - [ ] As an Astro Component (Though it should work just fine as a web component)
-- [ ] Support for markdown codeblocks
-- [ ] Syntax Highlighting (looking for article with example)
-- [ ] Make styles more configurable (`::part`, `--cc-prop-name`)
+- [ ] Support for markdown codeblocks *[Help Wanted]*
+- [ ] Syntax Highlighting (looking for article with example) 
+- [ ] Make styles more configurable (`::part`, `--cc-prop-name`) *[Help Wanted]*
 - [ ] Take advantage of DSD somehow (goes for styles too)
