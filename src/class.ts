@@ -63,8 +63,7 @@ button {
 }
 li:has(.copy) {
     justify-self: end;
-}
-`);
+}`);
 export class CodeCage extends HTMLElement {
   frame?: HTMLIFrameElement;
   // escape html
