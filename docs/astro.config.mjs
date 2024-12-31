@@ -13,6 +13,7 @@ export default defineConfig({
         github: "https://github.com/gingerchew/code-cage",
       },
       sidebar: [],
+	  credits: true
     }),
   ],
 });

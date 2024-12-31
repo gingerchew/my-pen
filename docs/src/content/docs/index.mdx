@@ -2,6 +2,8 @@
 title: Installation
 description: How to install and get started using CodeCage
 ---
+import { Code } from '@astrojs/starlight/components';
+import CodeCage from '../../components/CodeCage.astro';
 
 CodeCage is a Web Component to generate a CodePen like code viewing experience.
 
@@ -28,6 +30,16 @@ pnpm add code-cage
 ```
 
 > Make sure you include the script somewhere in your site.
+
+## Example
+
+<CodeCage
+  html="<div class='test'>Testing</div>"
+  css=".test {
+  color: limegreen;
+}"
+  js="(function() { console.log('testing') })()"
+/>
 
 ## To do
 
