@@ -1,6 +1,6 @@
 {
   "name": "code-cage",
-  "version": "0.0.8",
+  "version": "0.1.0",
   "module": "./dist/code-cage.js",
   "type": "module",
   "exports": {
@@ -19,7 +19,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "dev": "vite --host",
-    "build": "rimraf build/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts && copyfiles ./package.json build",
+    "build": "rimraf build/**/* && tsc && vite build && dts-bundle-generator --config ./dts-bundle-generator.config.ts",
     "test": "vitest",
     "test:coverage": "vitest --coverage",
     "lint:scripts": "eslint . --ext .ts",
