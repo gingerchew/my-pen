@@ -14,10 +14,9 @@ export default defineConfig({
       },
       sidebar: [
         {
-          label: "Guides", items: [
-            { label: "Astro", slug: "guides/astro" }
-          ]
-        }
+          label: "Guides",
+          items: [{ label: "Astro", slug: "guides/astro" }],
+        },
       ],
       credits: true,
     }),
