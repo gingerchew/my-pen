@@ -1,13 +1,88 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Vite App</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      h3 {
+        padding-inline: 1ch;
+      }
+    </style>
   </head>
   <body>
-    <div id="app"></div>
-    <script type="module" src="/src/index.ts"></script>
+    <h3>Light Mode & No Title</h3>
+    <my-pen
+      html='<div class="test">Testing</div>'
+      css=".test {
+      color: limegreen;
+    }"
+      js="(function() { console.log('testing') })()"
+    ></my-pen>
+    <h3>Dark Mode & No Title</h3>
+    <my-pen
+      html='<div class="test">Testing</div>'
+      css=".test {
+      color: limegreen;
+    }"
+      js="(function() { console.log('testing') })()"
+    ></my-pen>
+    <my-pen
+      title="Light Mode & Title"
+      html='<div class="test">Testing</div>'
+      css=".test {
+  color: limegreen;
+}"
+      js="(function() { console.log('testing') })()"
+    ></my-pen>
+    <my-pen
+      dark
+      title="Dark Mode & Title"
+      html='<div class="test">Testing</div>'
+      css=".test {
+  color: limegreen;
+}"
+      js="(function() { console.log('testing') })()"
+    ></my-pen>
+    <my-pen title="Using your own syntax highlighting" use-slots>
+      <pre
+        slot="js"
+        style="
+          font-family: monospace;
+          color: rgb(68, 68, 68);
+          background-color: rgb(243, 243, 243);
+          font-weight: 400;
+        "
+      >(<span style="color: rgb(68, 68, 68); font-weight: 700;">function</span>(<span style="color: rgb(68, 68, 68); font-weight: 400;"></span>) { <span style="color: rgb(171, 86, 86); font-weight: 400;">console</span>.<span style="color: rgb(136, 0, 0); font-weight: 700;">log</span>(<span style="color: rgb(136, 0, 0); font-weight: 400;">"testing"</span>) })();</pre>
+      <pre
+        slot="html"
+        style="
+          font-family: monospace;
+          color: rgb(68, 68, 68);
+          background-color: rgb(243, 243, 243);
+          font-weight: 400;
+        "
+      >
+&lt;div <span style="color: rgb(68, 68, 68); font-weight: 700;">class</span>=<span style="color: rgb(136, 0, 0); font-weight: 400;">"test"</span>&gt;
+  <span style="color: rgb(136, 0, 0); font-weight: 700;">Testing</span>
+&lt;/div&gt;</pre>
+      <pre
+        slot="css"
+        style="
+          font-family: monospace;
+          color: rgb(68, 68, 68);
+          background-color: rgb(243, 243, 243);
+          font-weight: 400;
+        "
+      ><span style="color: rgb(136, 0, 0); font-weight: 400;">.test</span> {<br/>    <span style="color: rgb(68, 68, 68); font-weight: 700;">color</span>: limegreen;<br/>}</pre>
+    </my-pen>
+    <script type="module">
+      import { define } from "./src/index";
+      define();
+    </script>
   </body>
 </html>

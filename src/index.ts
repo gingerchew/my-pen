@@ -1,3 +1,4 @@
-import "./style.css";
+import { MyPen } from "./class";
 
-export { sum } from "./sum";
+export const define = (localName = "my-pen") =>
+  customElements.define(localName, MyPen);
