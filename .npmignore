@@ -2,7 +2,8 @@ docs/
 .husky/
 .github/
 test/
-build/package.json
+build/
+
 src/
 .prettierignore
 .eslintrc
