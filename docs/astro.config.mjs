@@ -14,13 +14,6 @@ export default defineConfig({
         github: "https://github.com/gingerchew/code-cage",
       },
       sidebar: [
-        {
-          label: "Guides",
-          items: [
-            // Each item here is one entry in the navigation menu.
-			{ "label": "Getting Started", slug: "guides/installation" }
-          ],
-        },
       ],
     }),
   ],

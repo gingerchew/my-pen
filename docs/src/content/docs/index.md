@@ -1,9 +1,9 @@
 ---
 title: Installation
-description: How to install and get started using MyPen
+description: How to install and get started using CodeCage
 ---
 
-MyPen is a Web Component to generate a CodePen like code viewing experience.
+CodeCage is a Web Component to generate a CodePen like code viewing experience.
 
 ## Install
 
