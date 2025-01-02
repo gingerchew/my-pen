@@ -3,18 +3,23 @@
 A CodePen-like web component for showing off your code.
 
 ```js
-import { define } from 'code-cage';
+import { define } from "code-cage";
 define();
 ```
 
 ```html
 <code-cage use-slots dark>
-    <span slot="html">{html_string_syntax_highlighted}</span>
-    <span slot="css">{css_string_syntax_highlighted}</span>
-    <span slot="js">{js_string_syntax_highlighted}</span>
+  <span slot="html">{html_string_syntax_highlighted}</span>
+  <span slot="css">{css_string_syntax_highlighted}</span>
+  <span slot="js">{js_string_syntax_highlighted}</span>
 </code-cage>
 <!-- Or if you don't use syntax highlighting -->
- <code-cage dark html="{html_string}" css="{css_string}" js="{js_string}"></code-cage>
+<code-cage
+  dark
+  html="{html_string}"
+  css="{css_string}"
+  js="{js_string}"
+></code-cage>
 ```
 
 Also available as an Astro component:

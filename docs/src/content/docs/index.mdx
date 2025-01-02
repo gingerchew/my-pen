@@ -3,7 +3,7 @@ title: Installation
 description: How to install and get started using CodeCage
 ---
 
-import { Code } from "@astrojs/starlight/components";
+import { Code, Aside } from "@astrojs/starlight/components";
 import CodeCage from "../../components/CodeCage.astro";
 
 CodeCage is a Web Component to generate a CodePen like code viewing experience.
@@ -30,7 +30,44 @@ pnpm add code-cage
 ></code-cage>
 ```
 
-> Make sure you include the script somewhere in your site.
+<Aside>Make sure you include the script somewhere in your site.</Aside>
+
+You can also add the attribute `dark` to get the dark version. This sets the CSS property `color-scheme`. This means that in your styles you can use the `light-dark()` function and it will automatically update inside your code.
+
+### Styling
+
+While the inside of the component exists in the Shadow DOM, there are a series of `::part()` selectors that you can use to style.
+
+- `::part(button)`: Selects all the buttons in the top row.
+- `::part(content-type)`: Selects the `<ul>` wrapping the html, css, and js buttons.
+- `::part(controls)`: Selects the outer `<ul>` wrapping the content-type list and the copy button.
+- `::part(output)`: Selects the output tabs.
+- `::part(results)`: Selects the div wrapping the controls and the output.
+- `::part(iframe)`: Selects the iframe.
+- `::part(title)`: Selects the title. (If the title is unused, this doesn't select anything)
+- `::part(host)`: Selects the outer most wrapper of the component.
+
+There are also some custom properties that can be set if you don't want to mess with `::part()`
+
+- `--cc-color`: Sets the color.
+- `--cc-bg`: Sets the background of buttons and the `:host`.
+- `--cc-results-bg`: Sets the background of the code tabs.
+- `--cc-border`: Sets the border of the buttons and results.
+
+<Aside>
+`--cc-border` doesn't sets the whole `border` property.
+
+Using `light-dark()` you can also take advantage of the `dark attribute`.
+
+Here's an inaccessible example:
+
+```css
+code-cage {
+  --bg: light-dark(limegreen, papayawhipe);
+}
+```
+
+</Aside>
 
 ## Example
 
@@ -44,8 +81,10 @@ pnpm add code-cage
 
 ## To do
 
-- [ ] As an Astro Component (Though it should work just fine as a web component)
+- [ ] Set active language to show on load
+- [x] As an Astro Component (Though it should work just fine as a web component)
 - [ ] Support for markdown codeblocks _[Help Wanted]_
 - [ ] Syntax Highlighting ([Check out this css tricks article](https://css-tricks.com/css-custom-highlight-api-early-look/))
 - [ ] Make styles more configurable (`::part`, `--cc-prop-name`) _[Help Wanted]_
 - [ ] Take advantage of DSD somehow (goes for styles too)
+- [ ] Make it look better as a default _[Help Wanted]_
